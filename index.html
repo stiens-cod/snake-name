@@ -10,14 +10,20 @@
   <main class="app-shell">
     <h1>贪吃蛇小游戏</h1>
     <section class="game-panel">
-      <canvas id="gameCanvas" width="400" height="400"></canvas>
-      <div class="info">
-        <div>得分：<span id="score">0</span></div>
-        <div>最快：<span id="highScore">0</span></div>
-      </div>
-      <div class="controls">
-        <p>使用 WASD 控制方向，按 <strong>空格</strong> 或点击按钮重新开始。</p>
-        <button id="restartBtn">重新开始</button>
+      <div class="game-board">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="info">
+          <div>得分：<span id="score">0</span></div>
+          <div>最高：<span id="highScore">0</span></div>
+          <div>速度：<span id="speedValue">5</span></div>
+        </div>
+        <div class="controls">
+          <p>使用 <strong>WASD</strong> 控制方向，按 <strong>P</strong> 暂停 / 继续，按 <strong>空格</strong> 或点击按钮重新开始。</p>
+          <button id="restartBtn">重新开始</button>
+        </div>
+        <div class="status-card">
+          <span>状态：</span> <strong id="gameStatus">游戏准备中</strong>
+        </div>
       </div>
     </section>
     <footer>
