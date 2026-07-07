@@ -14,7 +14,7 @@ let food = { x: 0, y: 0 };
 let score = 0;
 let highScore = 0;
 let gameOver = false;
-let speed = 8;
+let speed = 5;
 let frameCount = 0;
 
 function resetGame() {
@@ -27,7 +27,7 @@ function resetGame() {
   nextDirection = { x: 1, y: 0 };
   score = 0;
   gameOver = false;
-  speed = 8;
+  speed = 5;
   placeFood();
   updateScore();
 }
@@ -92,7 +92,7 @@ function update() {
   if (head.x === food.x && head.y === food.y) {
     score += 10;
     highScore = Math.max(highScore, score);
-    speed = Math.min(14, speed + 0.3);
+    speed = Math.min(10, speed + 0.15);
     placeFood();
     updateScore();
   } else {
